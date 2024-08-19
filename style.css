@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/* Importo fontes externas */
+@import url('https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap');
+
+/* Cria variaveis para o CSS */
+:root {
+    --cor-principal: #000000;
+    --cor-secundaria: #8a91f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* Configuro a fonte */
+    font-family: "Lumanosimo", cursive;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+aside {
+    position: fixed;
+    top: 60px;
+    width: 20%;
+    bottom: 0;
+    padding: 10px;
+    background-color: #333;
+}
+
+aside ul li {
+    margin: 15px 0px;
+    list-style: none;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+aside ul li a:active {
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 60px;
+    margin-left: calc(20% + 20px);
+}
+
+section {
+    scroll-margin-top: 60px;
+    padding: 20px;
+    min-height: 100vh;
+    text-align: justify;
+}
+
+/* Pseudo Seletor para pares */
+section:nth-child(even) {
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+}
+
+/* Pseudo Seletor para ímpares */
+section:nth-child(odd) {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+}
+
+section p {
+    margin: 15px auto;
+    font-size: 2em;
+    font-weight: bold !important;
+}
+
+section ul {
+    margin-left: 30px;
+    font-size: 1.6em;
+}
+
+section img {
+    width: 100%;
+    max-width: 600px;
+    float: left;
+    margin: 10px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+footer {
+    position: sticky;
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
